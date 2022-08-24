@@ -1,0 +1,60 @@
+.ctrlBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  .ctrlName{
+    width: 100%;
+    text-align: left;
+    text-indent: 10px;
+    background: #ccc;
+    color: #666;
+  }
+  .ctrlContentBox{
+    padding: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .ctrlContentContainer{
+      min-height: 100px;
+      margin: 2px;
+      flex: 1;
+      border: 1px dashed #666;
+    }
+    .ctrlContentLabel{
+      margin-right: 10px;
+    }
+    .ctrlContentIcon{
+
+    }
+    .ctrlContent{
+      flex: 1;
+      .value{
+        color: #333;
+      }
+      .placeholder{
+        color: #ccc;
+      }
+    }
+  }
+  .ctrlContentBoxRow{
+    padding: 4px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    .ctrlContentLabelRow{
+      padding-left: 10px;
+    }
+    .ctrlContentRow{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

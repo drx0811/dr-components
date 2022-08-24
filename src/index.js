@@ -1,2 +1,9 @@
-export { default as Foo } from './Foo/src';
-export { default as FormJson } from './FormJson/src';
+import Foo from './Foo/src';
+import FormJson from './FormJson/src';
+import DragToMini from './DragToMini/src';
+
+export {
+  Foo,
+  FormJson,
+  DragToMini,
+}

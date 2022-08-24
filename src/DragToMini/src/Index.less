@@ -1,0 +1,156 @@
+@import '~antd/es/style/themes/default.less';
+
+.pageContent{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  .pageContentLeft{
+    overflow-y: scroll;
+    width: 280px;
+    background: #fff;
+    padding: 14px;
+    height: calc(100vh - 250px);
+  }
+  .pageContentLeftCollapse{
+    width: 250px;
+    height: 100%;
+    .pageContentLeftCollapsePanel{
+      width: 220px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .controller{
+        min-width: 100px;
+      }
+    }
+  }
+  .pageContentCenterBox{
+    height: calc(100vh - 240px);
+    width: 420px;
+    border: 5px solid #333333;
+    border-radius: 10px;
+    overflow-y: auto;
+    .pageContentCenterTitle{
+      height: 38px;
+      line-height: 38px;
+      cursor: pointer;
+      background: #cccccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .pageContentCenterTitleBtn{
+        margin-left: 12px;
+      }
+      .pageContentCenterTitleDel{
+        margin-right: 20px;
+        color: red;
+      }
+    }
+    .pageContentCenter{
+      border: 1px dashed  #333333;
+      min-height: calc(100vh - 310px);
+      padding: 6px;
+      padding-bottom: 10px;
+      width: 375px;
+      margin-left: 12px;
+      margin-right: 12px;
+      .clickFormItem{
+        background: #fff;
+        margin-bottom: 6px;
+        min-height: 54px;
+        position: relative;
+        border-radius: 5px;
+        border: 1px dashed  red;
+        cursor: pointer;
+        .ctrlItem{
+          width: 100%;
+          border-radius: 5px;
+        }
+        .tool{
+          position: absolute;
+          right: 5px;
+          top: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          span{
+            color: red;
+            cursor: pointer;
+          }
+        }
+      }
+      .formItem{
+        position: relative;
+        min-height: 54px;
+        border: 1px dashed #666;
+        border-radius: 5px;
+        background: #fff;
+        margin-bottom: 6px;
+        cursor: pointer;
+        .ctrlItem{
+          width: 100%;
+        }
+      }
+
+      .ctrlBox{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        .ctrlName{
+          width: 100%;
+          text-align: left;
+          text-indent: 10px;
+          background: #ccc;
+          color: #666;
+        }
+        .ctrlContentBox{
+          padding: 4px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .gridBoxDrag{
+            display: flex;
+            flex-direction: column;
+          }
+          .ctrlContentLabel{
+            margin-right: 10px;
+          }
+          .ctrlContentIcon{
+
+          }
+          .ctrlContent{
+            flex: 1;
+            .value{
+              color: #333;
+            }
+            .placeholder{
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+    .selectAllForm{
+      border: 1px dashed  red;
+    }
+  }
+  .pageContentRight{
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+    width: 375px;
+    min-width: 300px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 20px;
+    border: 1px solid #333333;
+  }
+}
