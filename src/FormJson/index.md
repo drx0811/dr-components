@@ -10,7 +10,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import FormJson from './src/index';
+import { FormJson } from 'dr-components';
 import './index.less';
 const schema = {
   title: 'Schema default properties',

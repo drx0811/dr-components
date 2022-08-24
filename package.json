@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "dr-components",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",

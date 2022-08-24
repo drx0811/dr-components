@@ -4,13 +4,13 @@ nav:
   path: /components
 ---
 
-## FormJson
+## DragToMini
 
 Demo:
 
 ```tsx
 import React from 'react';
-import DragToMini from './src/Index';
+import { DragToMini } from 'dr-components';
 import './index.less';
 export default () => <DragToMini />;
 ```
