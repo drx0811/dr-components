@@ -23,8 +23,8 @@ import {
 import { EditForm } from './components/EditForm/EditForm';
 import { StepItem } from './components/LayoutModule/Index';
 import FormModules from './components/FormModules/Index';
-import styles from './Index.less';
-// import { baseCtrl, componentLib } from './json.js';
+import './Index.less';
+import { baseCtrl, componentLib } from './json.js';
 import {
   getCloneItem,
   getItem,
@@ -53,7 +53,7 @@ const DragToMini = (dragProps) => {
   const [allModules, setAllModules] = useState([]);
   const [allLibs, setAllLibs] = useState([]);
   useEffect(() => {
-    const {baseCtrl = [],componentLib = []} = dragProps
+    // const {baseCtrl = [],componentLib = []} = dragProps
     setAllModules(baseCtrl);
     setAllLibs(componentLib);
   }, []);
@@ -140,17 +140,17 @@ const DragToMini = (dragProps) => {
                 data-id={indexLine}
                 className={classNames(
                   indexLine === curItemKey
-                    ? styles.clickFormItem
-                    : styles.formItem,
+                    ? 'drag-clickFormItem'
+                    : 'drag-formItem',
                 )}
               >
-                <div className={styles.ctrlItem}>
+                <div className='drag-ctrlItem'>
                   {props?.type === 'grid' && (
-                    <div key={indexLine} className={styles.ctrlBox}>
-                      <div className={styles.ctrlName}>{item.name}</div>
+                    <div key={indexLine} className='drag-ctrlBox'>
+                      <div className='drag-ctrlName'>{item.name}</div>
                       <div
                         data-id={indexLine}
-                        className={styles.ctrlContentBox}
+                        className='drag-ctrlContentBox'
                       >
                         <Sortable
                           style={{
@@ -158,7 +158,7 @@ const DragToMini = (dragProps) => {
                             minHeight: '100px',
                             border: '1px dashed #666',
                           }}
-                          className={styles.gridBoxDrag}
+                          className='drag-gridBoxDrag'
                           key={uniqueId()}
                           ref={(c) => c && c.sortable}
                           options={{
@@ -175,7 +175,7 @@ const DragToMini = (dragProps) => {
                   )}
                 </div>
                 {indexLine === curItemKey && (
-                  <div className={styles.tool}>
+                  <div className='drag-tool'>
                     <DeleteOutlined
                       onClick={(e) => {
                         e.stopPropagation();
@@ -193,11 +193,11 @@ const DragToMini = (dragProps) => {
               key={indexLine}
               className={classNames(
                 indexLine === curItemKey
-                  ? styles.clickFormItem
-                  : styles.formItem,
+                  ? 'drag-clickFormItem'
+                  : 'drag-formItem',
               )}
             >
-              <div className={styles.ctrlItem}>
+              <div className='drag-ctrlItem'>
                 {props?.type === 'field' && <InputItem {...item} />}
                 {props?.type === 'radio' && <RadioItem {...item} />}
                 {props?.type === 'checkboxGroup' && <CheckboxItem {...item} />}
@@ -212,7 +212,7 @@ const DragToMini = (dragProps) => {
                 {props?.type === 'step' && <StepItem {...item} />}
               </div>
               {indexLine === curItemKey && (
-                <div className={styles.tool}>
+                <div className='drag-tool'>
                   <DeleteOutlined
                     onClick={(e) => {
                       e.stopPropagation();
@@ -302,8 +302,8 @@ const DragToMini = (dragProps) => {
     }
   };
   return (
-    <div className={styles.pageContent}>
-      <div className={styles.pageContentLeft}>
+    <div className='drag-pageContent'>
+      <div className='drag-pageContentLeft'>
         <Tabs defaultActiveKey="1">
           <TabPane tab="控件库" key="1">
             <Collapse
@@ -312,13 +312,13 @@ const DragToMini = (dragProps) => {
               expandIcon={({ isActive }) => (
                 <CaretRightOutlined rotate={isActive ? 90 : 0} />
               )}
-              className={styles.pageContentLeftCollapse}
+              className='drag-pageContentLeftCollapse'
             >
               {allModules.map((module, index) => {
                 return (
                   <Panel header={module.title} key={index}>
                     <Sortable
-                      className={styles.pageContentLeftCollapsePanel}
+                      className='drag-pageContentLeftCollapsePanel'
                       options={{
                         group: {
                           name: 'formItem',
@@ -330,7 +330,7 @@ const DragToMini = (dragProps) => {
                     >
                       {(module.children || []).map((item) => (
                         <Button
-                          className={styles.controller}
+                          className='drag-controller'
                           data-id={item.code}
                           key={item.name}
                           style={{ marginTop: 10 }}
@@ -351,13 +351,13 @@ const DragToMini = (dragProps) => {
               expandIcon={({ isActive }) => (
                 <CaretRightOutlined rotate={isActive ? 90 : 0} />
               )}
-              className={styles.pageContentLeftCollapse}
+              className='drag-pageContentLeftCollapse'
             >
               {allLibs.map((module, index) => {
                 return (
                   <Panel header={module.title} key={index}>
                     <Sortable
-                      className={styles.pageContentLeftCollapsePanel}
+                      className='drag-pageContentLeftCollapsePanel'
                       options={{
                         group: {
                           name: 'formItem',
@@ -369,7 +369,7 @@ const DragToMini = (dragProps) => {
                     >
                       {(module.children || []).map((item) => (
                         <Button
-                          className={styles.controller}
+                          className='drag-controller'
                           data-id={item.code}
                           data-group={item.group}
                           key={item.name}
@@ -386,23 +386,23 @@ const DragToMini = (dragProps) => {
           </TabPane>
         </Tabs>
       </div>
-      <div className={styles.pageContentCenterBox}>
+      <div className={'drag-pageContentCenterBox'}>
         <div
           onClick={() => {
             handleFormFn();
           }}
-          className={styles.pageContentCenterTitle}
+          className={'drag-pageContentCenterTitle'}
         >
           <Button
             size='small'
-            className={styles.pageContentCenterTitleBtn}
+            className={'drag-pageContentCenterTitleBtn'}
             type='primary'
           >
             点击设置组件属性
           </Button>
           {curItemKey === 'ALL_FORM' && (
             <DeleteOutlined
-              className={styles.pageContentCenterTitleDel}
+              className={'drag-pageContentCenterTitleDel'}
               onClick={(e) => {
                 handleDelFormFn();
               }}
@@ -411,8 +411,8 @@ const DragToMini = (dragProps) => {
         </div>
         <Sortable
           className={classNames(
-            styles.pageContentCenter,
-            curItemKey === 'ALL_FORM' ? styles.selectAllForm : '',
+            'drag-pageContentCenter',
+            curItemKey === 'ALL_FORM' ? 'drag-selectAllForm' : '',
           )}
           ref={(c) => c && c.sortable}
           options={{
@@ -426,7 +426,7 @@ const DragToMini = (dragProps) => {
           {loop(itemData, '')}
         </Sortable>
       </div>
-      <div className={styles.pageContentRight}>
+      <div className='drag-pageContentRight'>
         {curItemKey && curItemKey !== 'ALL_FORM' && (
           <EditForm
             curItemKey={curItemKey}

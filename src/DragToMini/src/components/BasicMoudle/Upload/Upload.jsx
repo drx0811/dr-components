@@ -1,7 +1,7 @@
 import { PlusOutlined } from '@ant-design/icons'
 import { Upload } from 'antd'
 import React, { useState } from 'react'
-import style from '../Index.less'
+import  '../Index.less'
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -32,17 +32,17 @@ const UploadItem = (originProps) => {
     </div>
   )
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{originProps.name}</div>
       {props.isTitleRow ? (
-        <div className={style.ctrlContentBoxRow}>
-          <span className={style.ctrlContentLabelRow}>
+        <div className={"drag-ctrlContentBoxRow"}>
+          <span className={'drag-ctrlContentLabelRow'}>
             {props.required && <span style={{ color: 'red' }}>*</span>}
             {props.label}
           </span>
-          <div className={style.ctrlContentRow}>
+          <div className={'drag-ctrlContentRow'}>
             <Upload
-              className={style.ctrlContent}
+              className={'drag-ctrlContent'}
               action=""
               listType="picture-card"
               fileList={fileList}
@@ -54,10 +54,10 @@ const UploadItem = (originProps) => {
           </div>
         </div>
       ):(
-        <div className={style.ctrlContentBox}>
-          <span className={style.ctrlContentLabel}> {props.required && <span style={{ color: 'red' }}>*</span>}{props.label}</span>
+        <div className={'drag-ctrlContentBox'}>
+          <span className={'drag-ctrlContentLabel'}> {props.required && <span style={{ color: 'red' }}>*</span>}{props.label}</span>
           <Upload
-            className={style.ctrlContent}
+            className={'drag-ctrlContent'}
             action=""
             listType="picture-card"
             fileList={fileList}

@@ -1,15 +1,13 @@
 import { Steps } from 'antd'
 import React from 'react'
 const { Step } = Steps
-import style from '../Index.less'
+import  '../Index.less'
 const StepItem = (originProps) => {
   const { props = {} } = originProps;
-  console.log(props);
-
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
-      <div className={style.ctrlContentBox}>
+    <div className={'drag-ctrlBox'}>
+      <div className={'drag-ctrlName'}>{originProps.name}</div>
+      <div className={'drag-ctrlContentBox'}>
         <Steps progressDot={true} size="small" current={props.active}>
           {
             (props.enum||[]).map(it=>{

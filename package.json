@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "dr-components",
-  "version": "1.1.0",
+  "version": "1.1.4",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -20,9 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/drx0811/dr-component-rccomplate",
-    "branch": "main"
+    "url": "https://github.com/drx0811/dr-components.git",
+    "branch": "master"
   },
+  "sideEffects": [
+    ".less", ".css"
+  ],
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"

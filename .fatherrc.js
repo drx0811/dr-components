@@ -5,6 +5,9 @@ import typescript from 'rollup-plugin-typescript2'
 export default {
   esm: 'rollup',
   cjs: 'rollup',
+  lessInBabelMode: true,
+  // 是否提取 css 为单独文件
+  extractCSS: true,
   extraRollupPlugins: [
     commonjs(),
     // typescript({

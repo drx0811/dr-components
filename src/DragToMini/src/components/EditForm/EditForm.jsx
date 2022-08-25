@@ -2,7 +2,7 @@ import { Checkbox, Form, Input, Radio } from 'antd';
 import { useEffect, useState } from 'react';
 import { v4 as uuidFlag } from 'uuid';
 import EditTable from './EditTable';
-import styles from './Index.less';
+import  './Index.less';
 export const EditForm = (originProps) => {
   const { curItemKey, itemData } = originProps;
   const [currentItem, setCurrentItem] = useState({});
@@ -52,9 +52,9 @@ export const EditForm = (originProps) => {
   };
   return (
     <>
-      <h3 className={styles.editName}>{editName}</h3>
+      <h3 className={'drag-editName'}>{editName}</h3>
       <Form
-        className={styles.editFormBox}
+        className={'drag-editFormBox'}
         form={form}
         labelCol={{
           span: 8,

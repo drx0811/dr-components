@@ -1,19 +1,19 @@
 import { Image } from 'antd';
-import style from '../Index.less';
+import '../Index.less';
 const ImageItem = (originProps) => {
   const { props = {} } = originProps;
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{originProps.name}</div>
       {props.isTitleRow ? (
-        <div className={style.ctrlContentBoxRow}>
-          <span className={style.ctrlContentLabelRow}>
+        <div className={"drag-ctrlContentBoxRow"}>
+          <span className={'drag-ctrlContentLabelRow'}>
             {props.required && <span style={{ color: 'red' }}>*</span>}
             {props.label}
           </span>
-          <div className={style.ctrlContentRow}>
+          <div className={'drag-ctrlContentRow'}>
             <Image
-              className={style.ctrlContent}
+              className={'drag-ctrlContent'}
               width={100}
               height={100}
               src=""
@@ -21,13 +21,13 @@ const ImageItem = (originProps) => {
           </div>
         </div>
       ) : (
-        <div className={style.ctrlContentBox}>
-          <span className={style.ctrlContentLabel}>
+        <div className={'drag-ctrlContentBox'}>
+          <span className={'drag-ctrlContentLabel'}>
             {props.required && <span style={{ color: 'red' }}>*</span>}
             {props.label}
           </span>
           <Image
-            className={style.ctrlContent}
+            className={'drag-ctrlContent'}
             width={100}
             height={100}
             src=""

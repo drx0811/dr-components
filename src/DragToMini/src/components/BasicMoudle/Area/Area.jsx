@@ -1,39 +1,39 @@
 import { RightOutlined } from '@ant-design/icons';
-import style from '../Index.less';
+import '../Index.less';
 const AreaItem = (originProps) => {
   const { props = {} } = originProps;
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
+    <div className={'drag-ctrlBox'}>
+      <div className={'drag-ctrlName'}>{originProps.name}</div>
       {props.isTitleRow ? (
-        <div className={style.ctrlContentBoxRow}>
-          <span className={style.ctrlContentLabelRow}>
+        <div className={'drag-ctrlContentBoxRow'}>
+          <span className={'drag-ctrlContentLabelRow'}>
             {props.required && <span style={{ color: 'red' }}>*</span>}
             {props.label}
           </span>
-          <div className={style.ctrlContentRow}>
+          <div className={'drag-ctrlContentRow'}>
             {props.value ? (
-              <span className={style.value}>{props.value}</span>
+              <span className={'drag-value'}>{props.value}</span>
             ) : (
-              <span className={style.placeholder}>{props.placeholder}</span>
+              <span className={'drag-placeholder'}>{props.placeholder}</span>
             )}
-            <RightOutlined className={style.ctrlContentIcon} />
+            <RightOutlined className={'drag-ctrlContentIcon'} />
           </div>
         </div>
       ) : (
-        <div className={style.ctrlContentBox}>
-          <span className={style.ctrlContentLabel}>
+        <div className={'drag-ctrlContentBox'}>
+          <span className={'drag-ctrlContentLabel'}>
             {props.required && <span style={{ color: 'red' }}>*</span>}
             {props.label}
           </span>
-          <div className={style.ctrlContent}>
+          <div className={'drag-ctrlContent'}>
             {props.value ? (
-              <span className={style.value}>{props.value}</span>
+              <span className={'drag-value'}>{props.value}</span>
             ) : (
-              <span className={style.placeholder}>{props.placeholder}</span>
+              <span className={'drag-placeholder'}>{props.placeholder}</span>
             )}
           </div>
-          <RightOutlined className={style.ctrlContentIcon} />
+          <RightOutlined className={'drag-ctrlContentIcon'} />
         </div>
       )}
     </div>

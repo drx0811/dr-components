@@ -1,43 +1,43 @@
 import { Input } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
-import style from '../Index.less'
+import '../Index.less'
 import classNames from 'classnames';
 const InputItem = (props) => {
   let originProps = props.props
   let { titleWidth,isTitleRow, ...inputProps } = originProps
   let { inputType, ...textareaProps } = inputProps;
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{props.name}</div>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{props.name}</div>
       {
         originProps.isTitleRow ?
-        <div className={style.ctrlContentBoxRow}>
-          <span className={style.ctrlContentLabelRow}>
+        <div className={"drag-ctrlContentBoxRow"}>
+          <span className={'drag-ctrlContentLabelRow'}>
             {
               textareaProps.required && <span style={{color:'red'}}>*</span>
             }
             {textareaProps.label}
           </span>
-          <div className={style.ctrlContentRow}>
+          <div className={'drag-ctrlContentRow'}>
             {
               inputType==='textarea' ?
               <Input.TextArea
-                className={style.ctrlContent}
+                className={'drag-ctrlContent'}
                 bordered={false}
                 {...textareaProps}
               />:
               <Input
-                className={style.ctrlContent}
+                className={'drag-ctrlContent'}
                 bordered={false}
                 style={{ width: '50%' }}
                 {...textareaProps}
               />
             }
-            <RightOutlined className={style.ctrlContentIcon} />
+            <RightOutlined className={'drag-ctrlContentIcon'} />
           </div>
         </div>:
-          <div className={style.ctrlContentBox}>
-            <span className={classNames(style.ctrlContentLabel)}>
+          <div className={'drag-ctrlContentBox'}>
+            <span className={classNames('drag-ctrlContentLabel')}>
               {
                 textareaProps.required && <span style={{color:'red'}}>*</span>
               }
@@ -46,18 +46,18 @@ const InputItem = (props) => {
             {
               inputType ==='textarea' ?
                 <Input.TextArea
-                  className={style.ctrlContent}
+                  className={'drag-ctrlContent'}
                   bordered={false}
                   {...textareaProps}
                 />:
                 <Input
-                  className={style.ctrlContent}
+                  className={'drag-ctrlContent'}
                   bordered={false}
                   style={{ width: '50%' }}
                   {...textareaProps}
                 />
             }
-            <RightOutlined className={style.ctrlContentIcon} />
+            <RightOutlined className={'drag-ctrlContentIcon'} />
           </div>
       }
     </div>

@@ -1,11 +1,11 @@
 import React from 'react'
-import style from '../Index.less'
+import  '../Index.less'
 export default (originProps) => {
   const { props = {} } = originProps
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
-      <div className={style.ctrlContentBox}>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{originProps.name}</div>
+      <div className={'drag-ctrlContentBox'}>
         <div dangerouslySetInnerHTML={{ __html: props.value }}></div>
       </div>
     </div>

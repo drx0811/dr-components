@@ -1,20 +1,20 @@
 import { RightOutlined } from '@ant-design/icons';
 import { Checkbox, Space } from 'antd';
-import style from '../Index.less';
+import '../Index.less';
 const CheckboxItem = (props) => {
   let originProps = props.props;
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{props.name}</div>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{props.name}</div>
       {originProps.isTitleRow ? (
-        <div className={style.ctrlContentBoxRow}>
-          <span className={style.ctrlContentLabelRow}>
+        <div className={"drag-ctrlContentBoxRow"}>
+          <span className={'drag-ctrlContentLabelRow'}>
             {originProps.required && <span style={{ color: 'red' }}>*</span>}
             {originProps.label}
           </span>
-          <div className={style.ctrlContentRow}>
+          <div className={'drag-ctrlContentRow'}>
             <Checkbox.Group
-              className={style.ctrlContent}
+              className={'drag-ctrlContent'}
               value={originProps.value}
             >
               <Space direction={originProps.direction}>
@@ -27,17 +27,17 @@ const CheckboxItem = (props) => {
                 })}
               </Space>
             </Checkbox.Group>
-            <RightOutlined className={style.ctrlContentIcon} />
+            <RightOutlined className={'drag-ctrlContentIcon'} />
           </div>
         </div>
       ) : (
-        <div className={style.ctrlContentBox}>
-          <span className={style.ctrlContentLabel}>
+        <div className={'drag-ctrlContentBox'}>
+          <span className={'drag-ctrlContentLabel'}>
             {originProps.required && <span style={{ color: 'red' }}>*</span>}
             {originProps.label}
           </span>
           <Checkbox.Group
-            className={style.ctrlContent}
+            className={'drag-ctrlContent'}
             value={originProps.value}
           >
             <Space direction={originProps.direction}>
@@ -50,7 +50,7 @@ const CheckboxItem = (props) => {
               })}
             </Space>
           </Checkbox.Group>
-          <RightOutlined className={style.ctrlContentIcon} />
+          <RightOutlined className={'drag-ctrlContentIcon'} />
         </div>
       )}
     </div>

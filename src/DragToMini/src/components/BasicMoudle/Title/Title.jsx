@@ -1,12 +1,11 @@
-
-import style from '../Index.less'
+import  '../Index.less'
 const TitleItem = (originProps) => {
   const props = originProps.props;
   return (
-    <div className={style.ctrlBox}>
-      <div className={style.ctrlName}>{originProps.name}</div>
-      <div className={style.ctrlContentBox}>
-        <span className={style.ctrlContentLabel}>{originProps.title}</span>
+    <div className={"drag-ctrlBox"}>
+      <div className={"drag-ctrlName"}>{originProps.name}</div>
+      <div className={'drag-ctrlContentBox'}>
+        <span className={'drag-ctrlContentLabel'}>{originProps.title}</span>
         <span>（{props.desc}）</span>
       </div>
     </div>

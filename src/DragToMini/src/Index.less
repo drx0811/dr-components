@@ -1,22 +1,22 @@
 @import '~antd/es/style/themes/default.less';
 
-.pageContent{
+.drag-pageContent{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
   width: 100%;
-  .pageContentLeft{
+  .drag-pageContentLeft{
     overflow-y: scroll;
     width: 280px;
     background: #fff;
     padding: 14px;
     height: calc(100vh - 250px);
   }
-  .pageContentLeftCollapse{
+  .drag-pageContentLeftCollapse{
     width: 250px;
     height: 100%;
-    .pageContentLeftCollapsePanel{
+    .drag-pageContentLeftCollapsePanel{
       width: 220px;
       height: 100%;
       display: flex;
@@ -24,18 +24,18 @@
       justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
-      .controller{
+      .drag-controller{
         min-width: 100px;
       }
     }
   }
-  .pageContentCenterBox{
+  .drag-pageContentCenterBox{
     height: calc(100vh - 240px);
     width: 420px;
     border: 5px solid #333333;
     border-radius: 10px;
     overflow-y: auto;
-    .pageContentCenterTitle{
+    .drag-pageContentCenterTitle{
       height: 38px;
       line-height: 38px;
       cursor: pointer;
@@ -43,15 +43,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .pageContentCenterTitleBtn{
+      .drag-pageContentCenterTitleBtn{
         margin-left: 12px;
       }
-      .pageContentCenterTitleDel{
+      .drag-pageContentCenterTitleDel{
         margin-right: 20px;
         color: red;
       }
     }
-    .pageContentCenter{
+    .drag-pageContentCenter{
       border: 1px dashed  #333333;
       min-height: calc(100vh - 310px);
       padding: 6px;
@@ -59,7 +59,7 @@
       width: 375px;
       margin-left: 12px;
       margin-right: 12px;
-      .clickFormItem{
+      .drag-clickFormItem{
         background: #fff;
         margin-bottom: 6px;
         min-height: 54px;
@@ -67,11 +67,11 @@
         border-radius: 5px;
         border: 1px dashed  red;
         cursor: pointer;
-        .ctrlItem{
+        .drag-ctrlItem{
           width: 100%;
           border-radius: 5px;
         }
-        .tool{
+        .drag-tool{
           position: absolute;
           right: 5px;
           top: 3px;
@@ -84,7 +84,7 @@
           }
         }
       }
-      .formItem{
+      .drag-formItem{
         position: relative;
         min-height: 54px;
         border: 1px dashed #666;
@@ -92,58 +92,58 @@
         background: #fff;
         margin-bottom: 6px;
         cursor: pointer;
-        .ctrlItem{
+        .drag-ctrlItem{
           width: 100%;
         }
       }
 
-      .ctrlBox{
+      .drag-ctrlBox{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        .ctrlName{
+        .drag-ctrlName{
           width: 100%;
           text-align: left;
           text-indent: 10px;
           background: #ccc;
           color: #666;
         }
-        .ctrlContentBox{
+        .drag-ctrlContentBox{
           padding: 4px;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          .gridBoxDrag{
+          .drag-gridBoxDrag{
             display: flex;
             flex-direction: column;
           }
-          .ctrlContentLabel{
+          .drag-ctrlContentLabel{
             margin-right: 10px;
           }
-          .ctrlContentIcon{
+          .drag-ctrlContentIcon{
 
           }
-          .ctrlContent{
+          .drag-ctrlContent{
             flex: 1;
-            .value{
+            .drag-value{
               color: #333;
             }
-            .placeholder{
+            .drag-placeholder{
               color: #ccc;
             }
           }
         }
       }
     }
-    .selectAllForm{
+    .drag-selectAllForm{
       border: 1px dashed  red;
     }
   }
-  .pageContentRight{
+  .drag-pageContentRight{
     height: calc(100vh - 250px);
     overflow-y: scroll;
     width: 375px;

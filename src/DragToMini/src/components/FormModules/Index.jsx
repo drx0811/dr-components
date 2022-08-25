@@ -30,10 +30,10 @@ const FormModules = (props)=>{
       wrapperCol={{
         span: 13,
       }}
-      className={styles.editFormBox}
+      className={'drag-editFormBox'}
       form={form}
     >
-      <h3 className={styles.editName}>表单属性</h3>
+      <h3 className={'drag-editName'}>表单属性</h3>
       <Form.Item label="组件库" name="libCode">
         <Select
           showSearch
